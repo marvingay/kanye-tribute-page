@@ -212,7 +212,7 @@ h2 {
 
 #ksg-image {
     display: block;
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     text-align: center;
     box-shadow: $main-shadow;
@@ -220,7 +220,7 @@ h2 {
 
 #throne-image {
     display: block;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     box-shadow: $main-shadow;
 }
@@ -230,6 +230,7 @@ h2 {
     grid-template: 150px 1fr / 1fr 1.5fr 1.5fr;
     grid-template-areas: 'header header header'
     'text image image';
+    gap: 0px 30px;
     padding-left: 75px;
 
     h2 {
@@ -254,13 +255,13 @@ h2 {
 
     #time100 {
         box-shadow: $main-shadow;
-        max-height: 90%;
-        width: auto;
+        height: auto;
+        max-width: 100%;
         display: block;
         grid-area: image;
         justify-self: center;
         align-self: center;
-    }
+        }
 }
 
 

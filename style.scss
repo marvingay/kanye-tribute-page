@@ -1,0 +1,291 @@
+$main-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.2);
+
+body {
+    background: linear-gradient(180deg,#660018,#ba9200, #eb2698, #c8dee3, #a8120f, gold, black);
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: grid;
+    grid-template: repeat(5, auto) / 95%;
+    grid-row-gap: 40px;
+    margin: 40px 20px 40px 20px;
+    background-color: #dde3ed;
+}
+
+#bio {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    justify-content: stretch;
+
+    h1 {
+        font-size: 4em;
+        font-weight: bold;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #img-div {
+        justify-self: center;
+
+        #main-photo {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            box-shadow: $main-shadow;
+        }
+
+        #main-photo:hover {
+            box-shadow: 1px 1px 7px 3px rgba(124, 40, 20, 0.4)
+        }
+
+        figcaption {
+            padding-top: 5px;
+            font-style: italic;
+            font-size: 0.75em;
+            text-align: center;
+
+        }
+
+    }
+
+    #bio-text {
+        justify-self: center;
+        font-size: 20px;
+        width: 85%;
+
+        p {
+            text-align: center;
+        }
+    }
+    
+}   
+
+a {
+    color: crimson;
+}
+
+a:hover {
+    color: orange;
+    transform: scale(1.5);
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#discography {
+    display: grid;
+    grid-template: 0.5fr 0.5fr repeat(3, 1fr) / repeat(4, auto);
+    grid-template-areas: 
+        'header header header header'
+        'para para para para'
+        'album1 album2 album3 album4'
+        'album5 album6 album7 album8'
+        'album9 album10 album11 album12';
+    gap: 10px 10px;
+    padding-left: 75px;
+    
+    
+    h2 {
+        grid-area: header;
+        font-size: 3em;
+        justify-self: center;
+    }
+
+    p {
+        grid-area: para;
+        font-size: 20px;
+    }
+
+    .album-art {
+        max-width: 99%;
+        display: block;
+        height: auto;
+        justify-self: stretch;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    #cd:hover {
+        box-shadow: 2px 2px 4px 4px rgba(129,22,26,0.8);
+    }
+
+    #lr:hover {
+        box-shadow: 2px 2px 4px 4px rgba(47,13,4,0.8);
+    }
+
+    #grad:hover {
+        box-shadow: 2px 2px 4px 4px rgba(140,44,120,0.8);
+    }
+
+    #heartbreak:hover {
+        box-shadow: 2px 2px 4px 4px rgba(146, 172, 218, 0.582);
+    }
+
+    #mbdtf:hover {
+        box-shadow: 2px 2px 4px 4px rgba(52, 70, 48, 0.8);
+    }
+
+    #wtt:hover {
+        box-shadow: 2px 2px 4px 4px rgba(133,103,51,0.8);
+    }
+
+    #cs:hover {
+        box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    #yeezus {
+        align-self: center;
+    }
+
+    #yeezus:hover {
+        box-shadow: 2px 2px 4px 4px rgba(202,110,108,0.8);
+    }
+
+    #tlop:hover {
+        box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    #ye:hover {
+        box-shadow: 2px 2px 4px 4px rgba(47,212,69,0.8);
+    }
+
+    #ksg:hover {
+        box-shadow: 2px 2px 4px 4px rgba(52, 70, 48, 0.8);
+    }
+
+    #jik:hover {
+        box-shadow: 2px 2px 4px 4px rgba(83, 63, 255, 0.5);
+    }
+    
+}
+
+#collaborators {
+    display: grid;
+    grid-template: 150px 1fr / 1fr 1.5fr 1.5fr;
+    grid-template-areas: 'header header header'
+    'text image1 image2';
+    padding-left: 75px;
+
+    h2 {
+        grid-area: header;
+        font-size: 3em;
+        justify-self: center;
+        margin-bottom: 40px;
+    }
+
+    ul{
+        grid-area: text;
+        align-self: center;
+        list-style: none;
+        font-size: 24px;
+        font-weight: bold;
+        li {
+            margin: 10px;
+        }
+        li:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    #image-one {
+        grid-area: image1;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #image-two {
+        grid-area: image2;
+        justify-self: center;
+    }
+
+    figcaption {
+        padding-top: 5px;
+        font-style: italic;
+        font-size: 0.75em;
+        text-align: center;
+
+    }
+}
+
+#ksg-image {
+    display: block;
+    max-width: 300px;
+    height: auto;
+    text-align: center;
+    box-shadow: $main-shadow;
+}
+
+#throne-image {
+    display: block;
+    max-width: 400px;
+    height: auto;
+    box-shadow: $main-shadow;
+}
+
+#accolades {
+    display: grid;
+    grid-template: 150px 1fr / 1fr 1.5fr 1.5fr;
+    grid-template-areas: 'header header header'
+    'text image image';
+    padding-left: 75px;
+
+    h2 {
+        grid-area: header;
+        font-size: 3em;
+        justify-self: center;
+        margin-bottom: 40px;
+    }
+
+    ul{
+        box-shadow: $main-shadow;
+        grid-area: text;
+        align-self: center;
+        justify-self: center;
+        border: 8px solid black;
+        font-size: 24px;
+        font-weight: bold;
+        li {
+            margin: 10px;
+        }
+    }
+
+    #time100 {
+        box-shadow: $main-shadow;
+        max-height: 90%;
+        width: auto;
+        display: block;
+        grid-area: image;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+
+
+#fashion {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    justify-content: stretch;
+    padding-left: 75px;
+
+    h2 {
+        font-size: 3em;
+        justify-self: center;
+    }
+
+    p {
+        justify-self: center;
+        text-align: center;
+        font-size: 20px;
+        width: 85%;
+    }
+
+    #adidas-yeezy {
+        justify-self: center;
+        align-self: start; 
+        width: 90%;
+    }
+}
